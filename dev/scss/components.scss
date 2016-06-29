@@ -3,8 +3,18 @@ html {
     font-weight: 400;
 }
 
+body {
+    background: url(http://3.bp.blogspot.com/-y4k360eR7J8/U7wLHmLK79I/AAAAAAAACgY/P4FckTDkz54/s1600/checker_real_canon18mm_dots_m.png);
+    background-image: linear-gradient(to bottom, rgba(27, 98, 148, 0), rgba(27, 98, 148, 0.68));
+    //background-attachment: fixed;
+    //background-size: 20%;
+}
+
 .container {
     width: 620px; margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0px 0px 10px  #777;
 }
 
 .container__row {
