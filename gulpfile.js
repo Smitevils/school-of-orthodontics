@@ -18,18 +18,18 @@ var reload = browserSync.reload;
 var path = {
   build: {
     html: './dist',
-    js: './dist/assets/js',
-    style: './dist/assets/css'
+    js: './dist/js',
+    style: './dist/styles'
   },
   src: {
     html: './dev/html/*.html',
     js: './dev/js/*.js',
-    style: './dev/sass/*.scss'
+    style: './dev/scss/*.scss'
   },
   watch: {
     html: './dev/html/**/*.html',
     js: './dev/js/*.js',
-    style: './dev/sass/**/*.scss'
+    style: './dev/scss/*.scss'
   }
 };
 
@@ -79,7 +79,7 @@ gulp.task('notify', function () {
 
 // Watch
 gulp.task('watch', function(cb){
-    gulp.watch('./dev/sass/**/*.scss', ['sass']);
+    gulp.watch('./dev/scss/**/*.scss', ['sass']);
     gulp.watch('./dev/html/**/*.html', ['html']);
     //gulp.watch('./**/*', ['notify']);
 });

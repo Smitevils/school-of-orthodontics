@@ -1,0 +1,59 @@
+html {
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 400;
+}
+
+.container {
+    width: 620px; margin: 0 auto;
+}
+
+.container__row {
+    padding: 10px 0;
+}
+
+.container_markup {
+    margin-top: 80px;
+    margin-bottom: 200px;
+}
+
+.btn {
+    text-align: center;
+    padding: 6px 46px;
+    display: inline-block;
+    background-color: #32c5ef;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700;
+    border-radius: 100px;
+    max-width: 200px;
+    //--
+    span {
+        width: 100%;
+        display: inline-block;
+        overflow: hidden;
+    }
+    //--
+    &:hover {
+        background-color: #64d9fb;
+    }
+    &:active {
+        background-color: lighten(#64d9fb, 10%);
+    }
+}
+
+input, select {
+  background-color: #f9f8f8;
+  border: solid 2px #d3d3d3;
+  padding: 12px;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: #3d3d3d;
+  outline: none;
+  //--
+  transition: border-color .1s;
+  //--
+  &:focus {
+    border-color: #58daf8;
+  }
+}
