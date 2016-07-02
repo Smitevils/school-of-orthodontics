@@ -1,10 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
+    <link rel="stylesheet" href="styles/normalize.min.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="styles/components.min.css">
+    <link rel="stylesheet" href="styles/selectize.css">
+    <!-- <link rel="stylesheet" href="https://raw.githubusercontent.com/selectize/selectize.js/master/dist/css/selectize.default.css"> -->
+    <!-- for selectize -->
+    <!--[if lt IE 9]><script src="http://cdnjs.cloudflare.com/ajax/libs/es5-shim/2.0.8/es5-shim.min.js"></script><![endif]-->
 </head>
 <body>
-    <a href="markup.html">markup.html</a>
+    <header class="amiblock header">
+        <div class="header__container">
+            <div class="header__half pseudo-middle">
+                <div class="logo">ШКОЛА ОРТОДОНТИИ</div>
+            </div>
+            <div class="header__half pseudo-middle">
+                <button class="link-btn">Войти</button>
+                <button class="btn" type="button">Регистрация</button>
+            </div>
+        </div>
+    </header>
+    <div class="main-screen">
+        <div class="main-screen__wrapper"></div>
+    </div>
+    <div class="container main-container">
+        dshdfh
+    </div>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="js/selectize.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(window).on('scroll', function(){
+                if ($(window).scrollTop() > 300) {
+                    $('.main-screen__wrapper').addClass('colored')
+                } else {
+                    $('.main-screen__wrapper').removeClass('colored')
+                }
+            });
+        });
+    </script>
 </body>
 </html>

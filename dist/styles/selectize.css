@@ -324,7 +324,7 @@
 
 /* user settings */
 .selectize-input {
-    padding: 12px;
+    padding: 9px 12px;
     border-radius: 0;
     font-family: 'PT Sans', sans-serif;
     font-size: 13px;
@@ -349,7 +349,7 @@
 }
 
 .selectize-dropdown [data-selectable], .selectize-dropdown .optgroup-header {
-    padding: 12px;
+    padding: 9px 12px;
     border-radius: 0;
     font-family: 'PT Sans', sans-serif;
     font-size: 13px;

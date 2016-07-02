@@ -1,20 +1,30 @@
+@charset "utf-8";
+@import 'variables';
+
 html {
     font-family: 'PT Sans', sans-serif;
     font-weight: 400;
+    min-height: 100%;
 }
 
 body {
-    background: url(http://3.bp.blogspot.com/-y4k360eR7J8/U7wLHmLK79I/AAAAAAAACgY/P4FckTDkz54/s1600/checker_real_canon18mm_dots_m.png);
     background-image: linear-gradient(to bottom, rgba(27, 98, 148, 0), rgba(27, 98, 148, 0.68));
-    //background-attachment: fixed;
-    //background-size: 20%;
+    background-repeat: no-repeat;
+    min-height: 100%;
+}
+
+.pseudo-middle:before {
+    content: '';
+    display: inline-block;
+    width: 0;
+    height: 100%;
+    vertical-align: middle;
 }
 
 .container {
     width: 620px; margin: 0 auto;
-    background-color: #fff;
-    padding: 20px;
-    box-shadow: 0px 0px 10px  #777;
+    background-color: $color_white;
+    box-shadow: 0 14px 30px 0 rgba(0, 0, 0, 0.14);
 }
 
 .container__row {
@@ -24,8 +34,25 @@ body {
 .container_markup {
     margin-top: 80px;
     margin-bottom: 200px;
+    box-shadow: 0px 0px 10px  #777;
+    padding: 20px;
 }
 
+ul.color-cheme {
+    display: inline-block;
+    padding: 0; margin: 0;
+	li {
+		display: inline-block;
+		width: 30px;
+		height: 30px;
+        padding: 0; margin: 0;
+	}
+    @for $i from 1 through length($color-cheme) {
+        li:nth-child(#{length($color-cheme)}n+#{$i}) {
+            background: nth($color-cheme, $i)
+        }
+    }
+}
 .btn {
     text-align: center;
     padding: 6px 46px;
@@ -36,6 +63,10 @@ body {
     font-weight: 700;
     border-radius: 100px;
     max-width: 200px;
+    border: 0;
+    outline: none;
+    font-size: 16px;
+    transition: background-color .2s;
     //--
     span {
         width: 100%;
@@ -54,7 +85,7 @@ body {
 input, select {
   background-color: #f9f8f8;
   border: solid 2px #d3d3d3;
-  padding: 12px;
+  padding: 9px 12px;
   font-family: 'PT Sans', sans-serif;
   font-size: 13px;
   font-weight: 400;
@@ -66,4 +97,100 @@ input, select {
   &:focus {
     border-color: #58daf8;
   }
+}
+
+//------
+
+.header {
+    background-color: $color_white;
+    width: 100%;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.14);
+    padding: 14px 0px;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+
+.header__container {
+    width: 1280px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    font-size: 0;
+}
+
+.header__half {
+    width: 50%;
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
+    //--
+    & + & {text-align: right;}
+}
+
+.logo {
+    display: inline-block;
+    font-weight: 700;
+    color: $color-f-1;
+    font-size: 22px;
+    text-transform: uppercase;
+    vertical-align: middle;
+    letter-spacing: 1px;
+}
+
+.link-btn {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 400;
+    color: $color-f-2;
+    background-color: transparent;
+    border: 0;
+    outline: none;
+    //--
+    & + .btn {
+        margin-left: 40px;
+    }
+    &:hover {
+        color: darken($color-f-2, 20%);
+        text-decoration: underline;
+    }
+    &:active {
+        color: lighten($color-f-2, 40%);
+        text-decoration: underline;
+    }
+}
+
+//-------------------------------------
+
+.main-screen {
+    //background-color: #000;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 0;
+    background-image: url(../images/doctor.png);
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-size: 28% 88%;
+}
+
+.main-screen__wrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0; left: 0;
+    background-color: rgba(27, 98, 148, 0.68);
+    opacity: 0;
+    transition: opacity 0.6s;
+    //
+    &.colored {
+        opacity: 1;
+    }
+}
+
+.main-container {
+    height: 700px;
+    position: relative;
+    margin-top: 560px;
+    margin-bottom: 60px;
 }
