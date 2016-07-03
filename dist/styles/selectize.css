@@ -323,6 +323,11 @@
 }
 
 /* user settings */
+.selectize-control {
+    display: inline-block;
+    vertical-align: middle;
+}
+
 .selectize-input {
     padding: 9px 12px;
     border-radius: 0;

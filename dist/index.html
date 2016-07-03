@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="styles/components.min.css">
     <link rel="stylesheet" href="styles/selectize.css">
+    <link rel="stylesheet" href="styles/minimal.css">
     <!-- <link rel="stylesheet" href="https://raw.githubusercontent.com/selectize/selectize.js/master/dist/css/selectize.default.css"> -->
     <!-- for selectize -->
     <!--[if lt IE 9]><script src="http://cdnjs.cloudflare.com/ajax/libs/es5-shim/2.0.8/es5-shim.min.js"></script><![endif]-->
@@ -25,12 +26,176 @@
     </header>
     <div class="main-screen">
         <div class="main-screen__wrapper"></div>
+        <div class="main-screen__text">
+            <h1>Уважаемые участники!</h1>
+            <p>Вы находитесь на странице регистрации образовательного проекта – «Школа ортодотнии». С Мая 2016 года все новые группы открываются под руководством основателей данного проекта - Тихонова Андрея Викторовича и Тихонова Сергея Викторовича. Данная инициатива поддерживается компанией Ormco и направлена на дальнейшее развитие и улучшение качества проводимых семинаров!</p>
+            <div class="notice">
+                <!-- <div class="notice__img pseudo-middle">
+
+                </div> -->
+                <div class="notice__text">
+                    Для принятия участия необходимо заполнить форму регистрации ниже и оплатить первый этап обучения.
+                </div>
+            </div>
+        </div>
+        <aside class="main-aside pseudo-middle">
+            <div class="aside-contact-block">
+                <img src="images/userpic.png" alt="contact" class="aside-contact-block_img">
+                <h4>Юлиан Галынин</h4>
+                <p>Контактное лицо по вопросам записи в новые группы</p>
+                <p>
+                    Телефон: 8-921-877-88-87<br>
+                    e-mail: yulian@orthodontexpert.ru
+                </p>
+            </div>
+        </aside>
     </div>
     <div class="container main-container">
-        dshdfh
+        <div class="container__row text-center">
+            <button class="move-to"></button>
+        </div>
+        <div class="container__row text-center">
+            <h1>Регистрация</h1>
+        </div>
+        <hr>
+        <div class="container__row">
+            <h3>Контактные данные</h3>
+        </div>
+        <div class="container__row">
+            <label for="lastname">Фамилия</label>
+            <input type="text" id="lastname" name="lastname" class="input_300">
+        </div>
+        <div class="container__row">
+            <label for="name">Имя</label>
+            <input type="text" id="name" name="name" class="input_300">
+        </div>
+        <div class="container__row">
+            <label for="surname">Отчество</label>
+            <input type="text" id="surname" name="surname" class="input_300">
+        </div>
+        <div class="container__row">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" class="input_300">
+        </div>
+        <div class="container__row">
+            <label for="phone">Мобильный телефон</label>
+            <input type="tel" id="phone" name="phone" class="input_300">
+        </div>
+        <div class="container__row">
+            <label for="country">Страна</label>
+            <select name="country" id="country" class="input_300">
+                <option value="0" selected>Выберите страну</option>
+                <option value="1">Россия</option>
+                <option value="2">Белоруссия</option>
+                <option value="3">Украина</option>
+            </select>
+        </div>
+        <div class="container__row">
+            <label for="city">Город</label>
+            <select name="city" id="city" class="input_300">
+                <option value="0" selected>Выберите город</option>
+                <option value="1">Москва</option>
+                <option value="2">Санкт-Петербург</option>
+                <option value="3">Владивосток</option>
+            </select>
+        </div>
+        <div class="container__row">
+            <div class="col-5">
+                <input type="checkbox" id="checkbox-1" class="input__checkbox-custom">
+            </div>
+            <div class="col-95">
+                <!-- <p>Согласие на обработку персональных данных (шаблонный договор, на право использование контактной информации для нужд процесса обучения, а также на возможность осуществления иформационных рассылок.
+    Без передачи информации третьим лицам)</p> -->
+                <label for="checkbox-1" class="label_default">Согласие на обработку персональных данных (шаблонный договор, на право использование контактной информации для нужд процесса обучения, а также на возможность осуществления иформационных рассылок.
+    Без передачи информации третьим лицам)</label>
+            </div>
+        </div>
+        <div class="container__row container__row_blue container__row__img-1 container__row__img-2 text-left clearfix">
+            <h3>Специализация</h3>
+            <div class="questions-block">
+                <div class="questions-block__row">
+                    <span class="questions-block__label">Вы еще учитесь?</span>
+                    <div class="questions-block__btn-container">
+                        <div class="questions-block__btn questions-block__btn_active">Да</div>
+                        <div class="questions-block__btn">Нет</div>
+                    </div>
+                </div>
+                <div class="questions-block__row">
+                    <select name="college" id="college" class="input_300">
+                        <option value="0" selected>Выберите уз</option>
+                        <option value="1">Студент медицинского ВУЗа</option>
+                        <option value="2">Студент медицинского ВУЗа 2</option>
+                        <option value="3">Студент медицинского ВУЗа 3</option>
+                    </select>
+                </div>
+                <div class="questions-block__row">
+                    <span class="questions-block__label">Имеете сертификат?</span>
+                    <div class="questions-block__btn-container">
+                        <div class="questions-block__btn">Да</div>
+                        <div class="questions-block__btn">Нет</div>
+                    </div>
+                </div>
+                <p class="questions-block__error">Необходимо получить медицинское образование, прежде чем проходить обучение на семинаре!</p>
+            </div>
+        </div>
+        <div class="container__row">
+            <h3>Правила регистрации</h3>
+            <p>Для продолжения процесса регистрации, Вам необходимо  оплатить Счет за первый период обучения - Уровень 1А. Оплата осуществляется безналичным способом, в российских рублях.
+Ваша учётная запись и счёт будут действительны в течение 10 календарных дней после регистрации. Если оплата не будет произведена в указанный срок, Ваша учётная запись будет автоматически удалена. В этом случае Вы можете пройти регистрацию повторно, при условии наличия места в группе.</p>
+            <p>ВНИМАНИЕ! Сам факт регистрации не является гарантией участия в выбранной Вами группе! Только своевременная оплата и получение подтверждения от организатора в письменном виде гарантирует Ваше участие в курсе лекций!</p>
+        </div>
+        <div class="container__row">
+            <div class="col-5">
+                <input type="checkbox" id="checkbox-2" class="input__checkbox-custom">
+            </div>
+            <div class="col-95">
+                <label for="checkbox-2" class="label_default">Я согласен с правилами регистрации</label>
+            </div>
+        </div>
+        <div class="container__row text-center">
+            <button class="btn btn_long btn_fat">Регистрация без оплаты</button>
+        </div>
+        <hr>
+        <div class="container__row">
+            <div class="payments-block">
+                <h3>Выбор формы оплаты</h3>
+                <div class="payments-block__row">
+                    <div class="payments-btns-container">
+                        <button class="payments-choise-btn payments-choise-btn_active">
+                            Частное лицо
+                        </button>
+                        <button class="payments-choise-btn">
+                            Юридическое лицо
+                        </button>
+                    </div>
+                </div>
+                <div class="payments-block__row">
+                    <div class="payments-btn">
+                        <div class="payments-btn__img"></div>
+                        <span class="payments-btn__text">Оплатить банковской картой</span>
+                    </div>
+                    <div class="payments-btn__label">
+                        Будет произведен на сторонний сайт для совершения оплаты банковской картой
+                    </div>
+                </div>
+                <div class="payments-block__row">
+                    <div class="payments-btn">
+                        <div class="payments-btn__img"></div>
+                        <span class="payments-btn__text">Оплата через отделение банка</span>
+                    </div>
+                    <div class="payments-btn__label">
+                        Запрос на выставление Счета на оплату. Вы получает уведомление по электронной почти о том, что Счет на оплату будет выставлен в течение 2-х дней.
+                    </div>
+                </div>
+                <p>
+                    Ваша учётная запись и счёт будут действительны в течение 10 календарных дней после регистрации. Если оплата не будет произведена в указанный срок, Ваша учётная запись будет автоматически удалена. В этом случае Вы можете пройти регистрацию повторно, при условии наличия места в группе.
+                </p>
+            </div>
+        </div>
     </div>
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <script src="js/selectize.min.js"></script>
+    <script src="js/icheck.js"></script>
     <script>
         $(document).ready(function() {
             $(window).on('scroll', function(){
@@ -39,6 +204,17 @@
                 } else {
                     $('.main-screen__wrapper').removeClass('colored')
                 }
+            });
+            //**
+            $('select').selectize({
+                //sortField: 'text',
+                hideSelected: true
+            });
+            //**
+            $('input[class="input__checkbox-custom"]').iCheck({
+                checkboxClass: 'icheckbox_minimal',
+                radioClass: 'iradio_minimal',
+                increaseArea: '20%' // optional
             });
         });
     </script>
