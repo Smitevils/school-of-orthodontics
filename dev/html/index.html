@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="styles/components.min.css">
     <link rel="stylesheet" href="styles/selectize.css">
     <link rel="stylesheet" href="styles/minimal.css">
+    <link rel="stylesheet" href="js/fancybox/jquery.fancybox.css">
     <!-- <link rel="stylesheet" href="https://raw.githubusercontent.com/selectize/selectize.js/master/dist/css/selectize.default.css"> -->
     <!-- for selectize -->
     <!--[if lt IE 9]><script src="http://cdnjs.cloudflare.com/ajax/libs/es5-shim/2.0.8/es5-shim.min.js"></script><![endif]-->
@@ -19,8 +20,8 @@
                 <div class="logo">ШКОЛА ОРТОДОНТИИ</div>
             </div>
             <div class="header__half pseudo-middle">
-                <button class="link-btn">Войти</button>
-                <button class="btn" type="button">Регистрация</button>
+                <button class="link-btn / js-login">Войти</button>
+                <button class="btn / js-scroll" type="button">Регистрация</button>
             </div>
         </div>
     </header>
@@ -30,9 +31,6 @@
             <h1>Уважаемые участники!</h1>
             <p>Вы находитесь на странице регистрации образовательного проекта – «Школа ортодотнии». С Мая 2016 года все новые группы открываются под руководством основателей данного проекта - Тихонова Андрея Викторовича и Тихонова Сергея Викторовича. Данная инициатива поддерживается компанией Ormco и направлена на дальнейшее развитие и улучшение качества проводимых семинаров!</p>
             <div class="notice">
-                <!-- <div class="notice__img pseudo-middle">
-
-                </div> -->
                 <div class="notice__text">
                     Для принятия участия необходимо заполнить форму регистрации ниже и оплатить первый этап обучения.
                 </div>
@@ -52,7 +50,7 @@
     </div>
     <div class="container main-container">
         <div class="container__row text-center">
-            <button class="move-to"></button>
+            <button class="move-to / js-scroll"></button>
         </div>
         <div class="container__row text-center">
             <h1>Регистрация</h1>
@@ -153,7 +151,7 @@
             </div>
         </div>
         <div class="container__row text-center">
-            <button class="btn btn_long btn_fat">Регистрация без оплаты</button>
+            <button class="btn btn_long btn_fat / js-pay">Регистрация без оплаты</button>
         </div>
         <hr>
         <div class="container__row">
@@ -193,9 +191,59 @@
             </div>
         </div>
     </div>
+    <div class="popups-container">
+        <div id="popup-1" class="popup">
+            <h2>Оплата успешно совершена!</h2>
+            <p>Спасибо за участие в программе! На указанный вами электронный адрес будут высланы инструкции по участию в занятиях. </p>
+            <div class="popup__row text-center">
+                <button class="btn btn_long / js-close-popup">Закрыть</button>
+            </div>
+        </div>
+        <div id="popup-2" class="popup">
+            <div class="popup__row">
+                <h2>Вы успешно зарегистрировались!</h2>
+                <p>
+                    На вашу почту будет выслан ваш пароль. У вас есть 10 дней, чтобы оплатить обучение. В течние этого времени вы можете вернуться на сайт, и опатить онлайн, либо запростить высталение счета и оплатить через банк
+                </p>
+            </div>
+            <div class="popup__row text-center">
+                <div class="payments-btn">
+                    <div class="payments-btn__img"></div>
+                    <span class="payments-btn__text">Оплатить банковской картой</span>
+                </div>
+            </div>
+            <div class="popup__row text-center">
+                <div class="payments-btn">
+                    <div class="payments-btn__img"></div>
+                    <span class="payments-btn__text">Оплата через отделение банка</span>
+                </div>
+            </div>
+            <div class="popup__row text-center">
+                <a href="#" class="popup__link / js-close-popup">Оплатить позже, в течение 10 дней</a>
+            </div>
+        </div>
+        <div id="popup-3" class="popup">
+            <div class="popup__row">
+                <h2>Вход в аккаунт</h2>
+            </div>
+            <div class="popup__row text-center">
+                <button class="btn btn_long / js-close-popup">Войти</button>
+            </div>
+        </div>
+        <div id="popup-3" class="popup">
+            <div class="popup__row">
+                <h2>Вход в аккаунт</h2>
+            </div>
+            <div class="popup__row text-center">
+                <button class="btn btn_long / js-close-popup">Войти</button>
+            </div>
+        </div>
+    </div>
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <script src="js/selectize.min.js"></script>
     <script src="js/icheck.js"></script>
+    <script src="js/jquery.mousewheel-3.0.6.pack.js"></script>
+    <script src="js/fancybox/jquery.fancybox.js"></script>
     <script>
         $(document).ready(function() {
             $(window).on('scroll', function(){
@@ -210,12 +258,30 @@
                 //sortField: 'text',
                 hideSelected: true
             });
+            //
+            $(document).on('click', '.js-scroll', function(event) {
+                event.preventDefault();
+                $('body').animate( { scrollTop: 500 }, 1000 );
+            })
             //**
             $('input[class="input__checkbox-custom"]').iCheck({
                 checkboxClass: 'icheckbox_minimal',
                 radioClass: 'iradio_minimal',
                 increaseArea: '20%' // optional
             });
+            $.fancybox($("#popup-2"));
+            $(document).on('click', '.js-close-popup', function(event) {
+                event.preventDefault();
+                $.fancybox.close();
+            })
+            $(document).on('click', '.js-pay', function(event) {
+                event.preventDefault();
+                $.fancybox($("#popup-2"));
+            })
+            $(document).on('click', '.js-login', function(event) {
+                event.preventDefault();
+                $.fancybox($("#popup-3"));
+            })
         });
     </script>
 </body>
