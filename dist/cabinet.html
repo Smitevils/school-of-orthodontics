@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/normalize.min.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="styles/components.min.css">
+    <link rel="stylesheet" href="styles/selectize.css">
+    <link rel="stylesheet" href="styles/minimal.css">
+    <link rel="stylesheet" href="js/fancybox/jquery.fancybox.css">
+    <!-- <link rel="stylesheet" href="https://raw.githubusercontent.com/selectize/selectize.js/master/dist/css/selectize.default.css"> -->
+    <!-- for selectize -->
+    <!--[if lt IE 9]><script src="http://cdnjs.cloudflare.com/ajax/libs/es5-shim/2.0.8/es5-shim.min.js"></script><![endif]-->
+</head>
+<body>
+    <header class="amiblock header">
+        <div class="header__container">
+            <div class="header__half pseudo-middle">
+                <div class="logo">ШКОЛА ОРТОДОНТИИ</div>
+            </div>
+            <div class="header__half pseudo-middle">
+                <button class="link-btn / js-login">Войти</button>
+                <button class="btn / js-scroll" type="button">Регистрация</button>
+            </div>
+        </div>
+    </header>
+    <div class="main-screen">
+        <div class="cabinet-container">
+            <div class="cabinet-block">
+                <div class="cabinet-name">Сергей Евтушенко</div>
+                <div class="cabinet-status cabinet-status_off">Осталось 7 дней на оплату обучения</div>
+                <div class="cabinet-status cabinet-status_on">Оплата успешно проведена</div>
+                <div class="cabinet-text">
+                    <p>
+                        Ваш аккаунт пока не активирован, мы ожидаем оплату 1 этапа. Занятия начнутся 23 октября 2016 года, за неделю до начала вам будет прислано уведомление на электронную почту и координатор курса свяжется с вами по телефону.
+                    </p>
+                </div>
+                <div class="payments-block">
+                    <div class="payments-block__row">
+                        <div class="payments-btn">
+                            <div class="payments-btn__img"></div>
+                            <span class="payments-btn__text">Оплатить банковской картой</span>
+                        </div>
+                        <div class="payments-btn__label">
+                            Будет произведен на сторонний сайт для совершения оплаты банковской картой
+                        </div>
+                    </div>
+                    <div class="payments-block__row">
+                        <div class="payments-btn">
+                            <div class="payments-btn__img"></div>
+                            <span class="payments-btn__text">Оплата через отделение банка</span>
+                        </div>
+                        <div class="payments-btn__label">
+                            Запрос на выставление Счета на оплату. Вы получает уведомление по электронной почти о том, что Счет на оплату будет выставлен в течение 2-х дней.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <aside class="main-aside pseudo-middle">
+            <div class="aside-contact-block">
+                <img src="/images/userpic.png" alt="contact" class="aside-contact-block__img">
+                <div class="main-aside__row">
+                    <span class="aside-contact-block__title">Юлиан Галынин</span>
+                </div>
+                <div class="main-aside__row">
+                    <p>Контактное лицо по вопросам записи в новые группы</p>
+                </div>
+                <div class="main-aside__row">
+                    <span>Телефон: 8-921-877-88-8</span>
+                </div>
+                <div class="main-aside__row">
+                    <span>e-mail: yulian@orthodontexpert.ru</span>
+                </div>
+            </div>
+        </aside>
+    </div>
+    <div class="popups-container">
+        <div id="popup-1" class="popup">
+            <h2>Оплата успешно совершена!</h2>
+            <p>Спасибо за участие в программе! На указанный вами электронный адрес будут высланы инструкции по участию в занятиях. </p>
+            <div class="popup__row text-center">
+                <button class="btn btn_long / js-close-popup">Закрыть</button>
+            </div>
+        </div>
+        <div id="popup-2" class="popup">
+            <div class="popup__row">
+                <h2>Вы успешно зарегистрировались!</h2>
+                <p>
+                    На вашу почту будет выслан ваш пароль. У вас есть 10 дней, чтобы оплатить обучение. В течние этого времени вы можете вернуться на сайт, и опатить онлайн, либо запростить высталение счета и оплатить через банк
+                </p>
+            </div>
+            <div class="popup__row text-center">
+                <div class="payments-btn">
+                    <div class="payments-btn__img"></div>
+                    <span class="payments-btn__text">Оплатить банковской картой</span>
+                </div>
+            </div>
+            <div class="popup__row text-center">
+                <div class="payments-btn">
+                    <div class="payments-btn__img"></div>
+                    <span class="payments-btn__text">Оплата через отделение банка</span>
+                </div>
+            </div>
+            <div class="popup__row text-center">
+                <a href="#" class="popup__link / js-close-popup">Оплатить позже, в течение 10 дней</a>
+            </div>
+        </div>
+        <div id="popup-3" class="popup">
+            <div class="popup__row">
+                <h2>Вход в аккаунт</h2>
+            </div>
+            <div class="popup__row">
+                <label for="login-email">Email</label>
+                <input type="email" id="login-email" name="login-email" class="input_300">
+            </div>
+            <div class="popup__row">
+                <label for="login-pass">Фамилия</label>
+                <input type="password" id="login-pass" name="login-pass" class="input_300">
+            </div>
+            <div class="popup__row text-center">
+                <div class="popup__btns-container">
+                    <button class="btn btn_long / js-close-popup">Войти</button>
+                    <div class="popup__link-container">
+                        <a href="#" class="link-btn link-btn_blue / js-close-popup js-restore">Забыл пароль</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="popup-4" class="popup">
+            <div class="popup__row">
+                <h2>Вход в аккаунт</h2>
+            </div>
+            <div class="popup__row">
+                <p>Введите email, указанный при регистрации</p>
+            </div>
+            <div class="popup__row">
+                <label for="restore">Email</label>
+                <input type="email" id="restore" name="restore" class="input_300">
+            </div>
+            <div class="popup__row text-center">
+                <div class="popup__btns-container">
+                    <button class="btn btn_long / js-close-popup">Восстановить</button>
+                    <div class="popup__link-container">
+                        <a href="#" class="link-btn link-btn_blue / js-close-popup js-login">Вспомнил пароль</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="js/selectize.min.js"></script>
+    <script src="js/icheck.js"></script>
+    <script src="js/jquery.mousewheel-3.0.6.pack.js"></script>
+    <script src="js/fancybox/jquery.fancybox.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(window).on('scroll', function(){
+                if ($(window).scrollTop() > 300) {
+                    $('.main-screen__wrapper').addClass('colored')
+                } else {
+                    $('.main-screen__wrapper').removeClass('colored')
+                }
+            });
+            //**
+            $('select').selectize({
+                //sortField: 'text',
+                hideSelected: true
+            });
+            //
+            $(document).on('click', '.js-scroll', function(event) {
+                event.preventDefault();
+                $('body').animate( { scrollTop: 500 }, 1000 );
+            })
+            //**
+            $('input[class="input__checkbox-custom"]').iCheck({
+                checkboxClass: 'icheckbox_minimal',
+                radioClass: 'iradio_minimal',
+                increaseArea: '20%' // optional
+            });
+            //$.fancybox($("#popup-3"));
+            $(document).on('click', '.js-close-popup', function(event) {
+                event.preventDefault();
+                $.fancybox.close();
+            })
+            $(document).on('click', '.js-pay', function(event) {
+                event.preventDefault();
+                $.fancybox($("#popup-2"));
+            })
+            $(document).on('click', '.js-login', function(event) {
+                event.preventDefault();
+                $.fancybox($("#popup-3"));
+            })
+            $(document).on('click', '.js-restore', function(event) {
+                event.preventDefault();
+                $.fancybox($("#popup-4"));
+            })
+        });
+    </script>
+</body>
+</html>

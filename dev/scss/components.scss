@@ -108,8 +108,8 @@ label + input, select + .selectize-control {
     &__img-1:before {
         content: "";
         display: block;
-        width: 270px;
-        height: 330px;
+        width: 300px;
+        height: 360px;
         position: absolute;
         right: 0;
         bottom: 0;
@@ -120,8 +120,8 @@ label + input, select + .selectize-control {
     &__img-2:before {
         content: "";
         display: block;
-        width: 270px;
-        height: 330px;
+        width: 300px;
+        height: 360px;
         position: absolute;
         right: 0;
         bottom: 0;
@@ -145,6 +145,10 @@ label + input, select + .selectize-control {
 
 .col-2 {
     width: 20%;
+}
+
+.col-3 {
+    width: 30%;
 }
 
 .col-4 {
@@ -212,6 +216,7 @@ ul.color-cheme {
     outline: none;
     font-size: 16px;
     transition: background-color .2s;
+    vertical-align: middle;
     //--
     span {
         width: 100%;
@@ -314,6 +319,7 @@ input, select {
     background-color: transparent;
     border: 0;
     outline: none;
+    vertical-align: middle;
     //--
     & + .btn {
         margin-left: 40px;
@@ -325,6 +331,17 @@ input, select {
     &:active {
         color: lighten($color-f-2, 40%);
         text-decoration: underline;
+    }
+    //--
+    &_blue {
+        color: $color-f-5;
+        //--
+        &:hover {
+            color: darken($color-f-5, 20%);
+        }
+        &:active {
+            color: lighten($color-f-5, 40%);
+        }
     }
 }
 
@@ -347,14 +364,18 @@ input, select {
 .main-screen__wrapper {
     width: 100%;
     height: 100%;
+    //display: none;
+    visibility: hidden;
     position: absolute;
     top: 0; left: 0;
     background-color: rgba(27, 98, 148, 0.68);
     opacity: 0;
-    transition: opacity 0.6s;
+    transition: all 0.6s;
     //
     &.colored {
         opacity: 1;
+        visibility: visible;
+        //display: block;
     }
 }
 
@@ -378,29 +399,45 @@ input, select {
     float: right;
     background-image: linear-gradient(to bottom, rgba(221, 235, 239, 0.2), rgba(164, 196, 213, 1));
     text-align: center;
+    //
+    .main-aside__row {
+        padding: 2px 0;
+    }
 }
 
 .aside-contact-block {
     display: inline-block;
-    width: 300px;
+    width: 220px;
     text-align: left;
     vertical-align: middle;
     font-size: 14px;
-}
-
-.aside-contact-block_img {
-    display: block;
-    margin: 0 auto;
+    //--
+    &__img {
+        display: block;
+        margin: 0 auto;
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        margin-bottom: 20px;
+    }
+    &__title {
+        font-size: 16px;
+        font-weight: 700;
+    }
 }
 
 .main-container {
-    position: relative; 
-    margin-top: 45%;
+    position: relative;
+    margin-top: 40%;
     margin-bottom: 60px;
     padding: 30px 40px;
     box-sizing: border-box;
 }
 
+.main-container__title {
+    color: $color-f-6;
+    font-size: 32px;
+}
 
 .notice {
     padding: 20px 10px;
@@ -553,6 +590,10 @@ input, select {
     }
 }
 
+.payments__notify {
+    margin-top: 40px;
+}
+
 //==========================================================
 //==========================================================
 //==========================================================
@@ -561,7 +602,7 @@ input, select {
     display: none;
 }
 .popup {
-    width: 400px;
+    width: 420px;
     color: #4d4d4d;
     //--
     &__row {
@@ -582,4 +623,81 @@ input, select {
         display: inline-block;
         margin: 20px 0;
     }
+    &__btns-container {
+        display: inline-block;
+        padding-left: 120px;
+    }
+    &__link-container {
+        margin-left: 20px;
+        width: 100px;
+        display: inline-block;
+        text-align: left;
+        vertical-align: middle;
+    }
+}
+
+//========================
+
+
+.cabinet-container {
+    width: 70%;
+    height: 100%;
+    float: left;
+    text-align: center;
+    background-color: $color_1;
+    position: relative;
+}
+
+.cabinet-block {
+    padding: 30px 40px;
+    border: solid 3px $color_3;
+    text-align: left;
+    min-width: 800px;
+    max-width: 80%;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    box-sizing: border-box;
+}
+
+.cabinet-name {
+    font-size: 32px;
+    font-weight: 700;
+    color: $color-f-1;
+    padding-bottom: 10px;
+}
+
+.cabinet-status {
+    padding: 5px 0;
+    //--
+    &_on {
+        color: $color_9;
+    }
+    &_off {
+        color: $color_7;
+    }
+}
+
+.cabinet-text {
+    width: 60%;
+    font-style: 16px;
+    font-weight: 400;
+    //
+    p {
+        font-size: inherit;
+    }
+}
+
+//
+
+.register-block {
+    padding-bottom: 40px;
+}
+
+.specialization-block {
+    padding: 10px 0;
+}
+
+.regulations-block {
+    padding-bottom: 40px;
 }
