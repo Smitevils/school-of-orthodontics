@@ -389,12 +389,13 @@ input, select {
 }
 
 .aside-contact-block_img {
-    display: inline-block;
+    display: block;
+    margin: 0 auto;
 }
 
 .main-container {
-    position: relative;
-    margin-top: 560px;
+    position: relative; 
+    margin-top: 45%;
     margin-bottom: 60px;
     padding: 30px 40px;
     box-sizing: border-box;
