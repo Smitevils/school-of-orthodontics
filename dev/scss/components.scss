@@ -217,6 +217,7 @@ ul.color-cheme {
     font-size: 16px;
     transition: background-color .2s;
     vertical-align: middle;
+    letter-spacing: 1px;
     //--
     span {
         width: 100%;
@@ -232,6 +233,9 @@ ul.color-cheme {
     }
     &_long {
         max-width: 300px;
+    }
+    &_middle {
+        padding: 10px 46px;
     }
     &_fat {
         padding: 14px 46px;
@@ -250,7 +254,7 @@ ul.color-cheme {
 
 input, select {
   background-color: #f9f8f8;
-  border: solid 2px #d3d3d3;
+  border: solid 1px #d3d3d3;
   padding: 9px 12px;
   font-family: 'PT Sans', sans-serif;
   font-size: 13px;
@@ -359,6 +363,7 @@ input, select {
     background-position: bottom left;
     background-size: 28% 88%;
     text-align: center;
+    min-width: 1200px;
 }
 
 .main-screen__wrapper {
@@ -379,17 +384,28 @@ input, select {
     }
 }
 
+.main-screen__left-container {
+    width: 70%;
+    height: 100%;
+    float: left;
+    position: relative;;
+}
+
 .main-screen__text {
     width: 420px;
     position: absolute;
-    left: 50%;
+    right: 10%;
     top: 50%;
-    transform: translate(-50%, -60%);
+    transform: translateY(-50%);
     text-align: left;
     //
     h1 {
         color: $color-f-1;
         font-size: 32px;
+    }
+    p {
+        font-size: 16px;
+        line-height: 24px;
     }
 }
 
@@ -528,7 +544,7 @@ input, select {
 
 .payments-block {
     &__row {
-        padding: 10px 0;
+        padding: 10px 0; white-space: none;
     }
 }
 
@@ -658,6 +674,9 @@ input, select {
     transform: translate(-50%, -50%);
     position: absolute;
     box-sizing: border-box;
+    @media (max-width: 1000px) {
+        min-width: 80%;
+    }
 }
 
 .cabinet-name {
@@ -692,6 +711,10 @@ input, select {
 
 .register-block {
     padding-bottom: 40px;
+    //--
+    &__title {
+        font-size: 24px;
+    }
 }
 
 .specialization-block {

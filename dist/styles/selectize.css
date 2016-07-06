@@ -334,13 +334,15 @@
     font-family: 'PT Sans', sans-serif;
     font-size: 13px;
     font-weight: 400;
-    border: solid 2px #d3d3d3;
+    border: solid 1px #d3d3d3;
     background-color: #f9f8f8;
     outline: none;
     transition: border-color .1s;
+    box-shadow: none;
 }
-.selectize-input:focus, .selectize-input.input-active, .selectize-input:hover {
-    border: solid 2px #58daf8;
+.selectize-input:focus, .selectize-input.input-active, .selectize-input:hover, .selectize-input.focus {
+    border: solid 1px #58daf8;
+    box-shadow: none;
 }
 
 .selectize-input.input-active {
@@ -348,7 +350,7 @@
 }
 
 .selectize-dropdown {
-    border: solid 2px #58daf8;
+    border: solid 1px #58daf8;
     border-top: solid 1px #58daf8;
     color: #3d3d3d;
 }
