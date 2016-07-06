@@ -17,7 +17,7 @@ var reload = browserSync.reload;
 
 var path = {
   build: {
-    html: './dist',
+    html: './dist/',
     js: './dist/js',
     style: './dist/styles'
   },

@@ -358,12 +358,26 @@ input, select {
     position: fixed;
     top: 0;
     z-index: 0;
-    background-image: url(../images/doctor.png);
+    //background-image: url(../images/doctor.png);
     background-repeat: no-repeat;
-    background-position: bottom left;
-    background-size: 28% 88%;
+    background-position: -100px left;
+    //background-size: 28% 88%;
+    background-size: contain;
     text-align: center;
     min-width: 1200px;
+}
+
+.main-screen_doctor:before {
+    content: '';
+    width: 28%;
+    height: 88%;
+    display: block;
+    background-image: url(../images/doctor.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left bottom;
+    position: absolute;
+    left: 0; bottom: 0;
 }
 
 .main-screen__wrapper {
@@ -723,4 +737,15 @@ input, select {
 
 .regulations-block {
     padding-bottom: 40px;
+}
+
+//-- media
+
+@media (max-width: $notebooks) {
+    .header__container {
+        width: 96%;
+        min-width: 400px;
+        padding-left: 2%;
+        padding-right: 2%;
+    }
 }
