@@ -44,7 +44,7 @@ $(document).ready(function() {
     //
     $(document).on('click', '.js-scroll', function(event) {
         event.preventDefault();
-        $('body').animate( { scrollTop: 500 }, 1000 );
+        $('body,html').animate( { scrollTop: 500 }, 1000 );
     })
     //**
     $('input[class="input__checkbox-custom"]').iCheck({

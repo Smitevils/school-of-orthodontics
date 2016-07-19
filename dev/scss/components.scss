@@ -462,10 +462,27 @@ input, select {
 
 .main-container {
     position: relative;
-    margin-top: 40%;
+    margin-top: 800px;
     margin-bottom: 60px;
     padding: 30px 40px;
     box-sizing: border-box;
+}
+
+
+@media screen and (max-width: 1700px) and (max-height: 1080px) {
+    .main-container {
+        margin-top: 760px;
+    }
+}
+@media screen and (max-width: 1400px) and (max-height: 800px) {
+    .main-container {
+        margin-top: 550px;
+    }
+}
+@media screen and (max-width: 1300px) and (max-height: 1060px) {
+    .main-container {
+       margin-top: 700px;
+    }
 }
 
 .main-container__title {
